@@ -1,3 +1,7 @@
 @import "normalize.css";
 @import "template.scss";
 @import "vars.scss";
+
+.container {
+  max-width: 1840px;
+}
