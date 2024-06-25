@@ -3,19 +3,23 @@
 @import "template.scss";
 
 .content {
-  padding: 36px 40px;
-  display: flex;
+  @include flex(stretch, space-between);
+  max-width: 1840px;
+  margin: 36px 40px;
+  border-radius: 10px;
   background-color: $bg;
   @media (max-width: $sm) {
     flex-direction: column;
-    padding: 24px;
+    row-gap: 24px;
+  }
+  @media (max-width: $xs) {
+    row-gap: 18px;
   }
 
   &__interface {
-    @include flex;
-    flex-basis: 50%;
+    padding: 72px;
     @media (max-width: $sm) {
-      flex-basis: 35%;
+      padding: 24px 24px 0 24px;
     }
   }
   &__wrapper {
@@ -49,14 +53,13 @@
       @media (max-width: $sm) {
         font-size: 16px;
       }
-      @media (max-width: $sm) {
+      @media (max-width: $xs) {
         font-size: 13px;
         margin-bottom: 18px;
       }
     }
     .content__btn {
       background: $bgBtn;
-      margin-right: 45px;
       .btn__text {
         font-family: $fontMedium;
         color: white;
@@ -74,17 +77,15 @@
       }
     }
   }
-
-  &__wrapper-img {
-    flex-basis: 50%;
-    width: 100%;
+  &__wrapper-img,
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px 10px 10px 0;
     @media (max-width: $sm) {
-      flex-basis: 65%;
-    }
-    img {
       width: 100%;
-      height: auto;
-      object-fit: cover;
+      border-radius: 0 0 10px 10px;
     }
   }
 }

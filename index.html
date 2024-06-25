@@ -27,9 +27,12 @@
           </button>
         </div>
       </div>
-      <div class="content__wrapper-img">
-        <img class="content__img" src="/images/pk.png" alt="personal logotip" />
-      </div>
+      <picture class="content__wrapper-img">
+        <source srcset="/images/pk_1440.png" media="(max-width:1440px)" />
+        <source srcset="/images/pk_768.png" media="(max-width:768px)" />
+        <source srcset="/images/pk_375.png" media="(max-width:375px)" />
+        <img class="" src="/images/pk_1920.png" alt="picture logo" />
+      </picture>
     </div>
     <script type="module" src="./src/js/main.js"></script>
   </body>
