@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "vars.scss";
 @import "template.scss";
+@import "modal.scss";
 
 .content {
   @include flex(stretch, space-between);
@@ -15,7 +16,6 @@
   @media (max-width: $xs) {
     row-gap: 18px;
   }
-
   &__interface {
     padding: 72px;
     @media (max-width: $sm) {

@@ -7,8 +7,26 @@
     <title>Webernetic Family</title>
   </head>
   <body>
-    <div class="wrapper-modal none">
-      <div id="modal"></div>
+    <div class="modal none">
+      <div class="modal__content">
+        <div class="modal__wrapper-btn">
+          <button class="modal__btn-close">
+            <img src="/images/close.png" alt="button close modal" />
+          </button>
+        </div>
+        <form action="#" class="form" name="form">
+          <h2 class="form__title">Войти в систему</h2>
+          <input type="text" placeholder="Email/Телефон" name="userdata" />
+          <input type="password" placeholder="Пароль" name="password" />
+          <div class="passwordSave">
+            <input type="checkbox" id="pass" name="isSavePassword" />
+            <label for="pass">Запомнить пароль</label>
+          </div>
+          <a href="#">Восстановить</a>
+          <input type="submit" value="Войти" />
+          <button type="button">Зарегестрироваться</button>
+        </form>
+      </div>
     </div>
     <div class="container content">
       <div class="content__interface">
