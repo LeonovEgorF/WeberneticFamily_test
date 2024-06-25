@@ -1,8 +1,28 @@
 @font-face {
   font-family: "ManropeRegular";
-  src: url(../../public/fonts/Manrope-Regular.ttf);
+  src: url(/fonts/Manrope-Regular.ttf);
 }
 @font-face {
   font-family: "ManropeMedium";
-  src: url(../../public/fonts/Manrope-Medium.ttf);
+  src: url(/fonts/Manrope-Medium.ttf);
+}
+@mixin flex($alignItems: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+.btn {
+  width: 341px;
+  height: 68px;
+  border-radius: 60px;
+  border: none;
+  @include flex(center, space-around);
+  @media (max-width: $sm) {
+    width: 261px;
+    height: 56px;
+  }
+  @media (max-width: $xs) {
+    width: 100%;
+  }
 }

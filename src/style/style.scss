@@ -1,7 +1,90 @@
 @import "normalize.css";
-@import "template.scss";
 @import "vars.scss";
+@import "template.scss";
 
-.container {
-  max-width: 1840px;
+.content {
+  padding: 36px 40px;
+  display: flex;
+  background-color: $bg;
+  @media (max-width: $sm) {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  &__interface {
+    @include flex;
+    flex-basis: 50%;
+    @media (max-width: $sm) {
+      flex-basis: 35%;
+    }
+  }
+  &__wrapper {
+    width: 511px;
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+    .content__title {
+      font-family: $fontMedium;
+      color: $colorTitle;
+      font-size: 30px;
+      margin-bottom: 18px;
+      @media (max-width: $lg) {
+        font-size: 26px;
+      }
+      @media (max-width: $sm) {
+        font-size: 20px;
+      }
+      @media (max-width: $xs) {
+        font-size: 17px;
+        margin-bottom: 14px;
+      }
+    }
+    .contenet__text {
+      font-family: $fontRegular;
+      color: rgb(114, 114, 114);
+      font-size: 18px;
+      line-height: 160%;
+      letter-spacing: 0;
+      margin-bottom: 36px;
+      @media (max-width: $sm) {
+        font-size: 16px;
+      }
+      @media (max-width: $sm) {
+        font-size: 13px;
+        margin-bottom: 18px;
+      }
+    }
+    .content__btn {
+      background: $bgBtn;
+      margin-right: 45px;
+      .btn__text {
+        font-family: $fontMedium;
+        color: white;
+        font-size: 18px;
+        @media (max-width: $sm) {
+          font-size: 15px;
+        }
+      }
+      .btn__wrapper-img {
+        background-color: white;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        @include flex;
+      }
+    }
+  }
+
+  &__wrapper-img {
+    flex-basis: 50%;
+    width: 100%;
+    @media (max-width: $sm) {
+      flex-basis: 65%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }
