@@ -23,5 +23,6 @@ function sendForm(e) {
   for (let [key, value] of data) {
     infUser[key] = value;
   }
+  form.reset();
   console.log(infUser);
 }
